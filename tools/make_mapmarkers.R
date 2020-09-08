@@ -63,7 +63,8 @@ make_icon <- function(name, marker_color, icon_color = "white"){
 
 
 # Make all icons
-these_colors <- c("red","orange","green","blue","purple","darkred","darkblue","darkgreen","darkpurple","navy")
+these_colors <- c("red","orange","green","blue","purple","darkred","darkblue",
+                  "darkgreen","darkpurple","navy")
 for(i in seq_along(fa_names)){
 
   for(col in these_colors){
