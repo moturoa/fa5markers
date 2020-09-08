@@ -1,7 +1,7 @@
 Package: fa5markers
 Type: Package
 Title: Map Markers with FontAwesome 5+ Icons
-Version: 0.1.0
+Version: 0.2.0
 Author: Remko Duursma
 Maintainer: Remko Duursma <remko@shintolabs.nl>
 Description: As a replacement for leaflet::awesomeIcons, which uses FontAwesome (fa) 4.7, and messes up shiny applications (which uses fa 5+).
