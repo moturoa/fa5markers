@@ -1,3 +1,5 @@
+![](https://badgen.net/badge/shintolabs/utility/purple)
+
 # `fa5markers` : Map markers met FontAwesome 5
 
 Een R package met ca. 16 duizend map markers als PNG, in 11 kleuren, met alle FontAwesome versie 5+ icons.
@@ -53,6 +55,11 @@ leaflet() %>%
   addMarkers(data = data.frame(lon=1,lat=1), icon = kvkIcons("56102"))
 ```
 
+
+
+## Contact
+
+Remko Duursma
 
 
   
