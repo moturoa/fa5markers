@@ -5,14 +5,25 @@
 #' @export
 #' @importFrom glue glue
 #' @importFrom leaflet makeIcon
-fa5Icon <- function(name, color =  c("blue","darkblue","darkgreen","darkpurple",
-                                             "darkred","green","navy","orange","pink",
-                                             "purple","red")){
+fa5Icon <- function(name, color = "blue"){
 
-  color <- match.arg(color)
+  if(!all(color %in% fa5_allowed_colors())){
+    stop(paste("Some colors not valid, allowed colors:", paste(fa5_allowed_colors(), collapse = ",")))
+  }
+  
+  if(length(color) != length(name) & length(color) > 1){
+    stop("Either specify a single color for all icons, or a vector of colors with the same length as 'name'")
+  }
 
   icon_url <- system.file(glue::glue("mapmarkers/{color}/{name}.png"), package = "fa5markers")
 
+  f_ex <- file.exists(icon_url)
+  if(!(all(f_ex))){
+    warning(paste("Not all icon names found: ", paste(unique(name[!f_ex]), collapse=",")))
+    name[!f_ex] <- "question-circle"
+    icon_url <- system.file(glue::glue("mapmarkers/{color}/{name}.png"), package = "fa5markers")
+  }
+  
   leaflet::makeIcon(icon_url,
            iconWidth = 36,
            iconHeight = 45,
@@ -22,3 +33,11 @@ fa5Icon <- function(name, color =  c("blue","darkblue","darkgreen","darkpurple",
 
 }
 
+
+
+
+fa5_allowed_colors <- function(){
+  c("blue","darkblue","darkgreen","darkpurple",
+    "darkred","green","navy","orange","pink",
+    "purple","red")
+}

@@ -4,11 +4,7 @@
 \alias{fa5Icon}
 \title{Make a map marker with a FontAwesome 5 icon}
 \usage{
-fa5Icon(
-  name,
-  color = c("blue", "darkblue", "darkgreen", "darkpurple", "darkred", "green", "navy",
-    "orange", "pink", "purple", "red")
-)
+fa5Icon(name, color = "blue")
 }
 \arguments{
 \item{name}{Name of the icon ("anchor")}
