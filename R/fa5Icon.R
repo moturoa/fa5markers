@@ -4,15 +4,16 @@
 #' @param color One of 11 colors
 #' @export
 #' @importFrom glue glue
+#' @importFrom leaflet makeIcon
 fa5Icon <- function(name, color =  c("blue","darkblue","darkgreen","darkpurple",
                                              "darkred","green","navy","orange","pink",
                                              "purple","red")){
 
   color <- match.arg(color)
 
-  icon_url <- system.file(glue("mapmarkers/{color}/{name}.png"), package = "fa5markers")
+  icon_url <- system.file(glue::glue("mapmarkers/{color}/{name}.png"), package = "fa5markers")
 
-  makeIcon(icon_url,
+  leaflet::makeIcon(icon_url,
            iconWidth = 36,
            iconHeight = 45,
            iconAnchorX = 18,

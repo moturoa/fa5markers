@@ -26,9 +26,9 @@ kvkIcons <- function(x, color = c("blue","darkblue","darkgreen","darkpurple",
 
   if(names_only)return(fa)
 
-  icon_url <- system.file(glue("mapmarkers/{color}/{fa}.png"), package = "fa5markers")
+  icon_url <- system.file(glue::glue("mapmarkers/{color}/{fa}.png"), package = "fa5markers")
 
-  makeIcon(icon_url,
+  leaflet::makeIcon(icon_url,
            iconWidth = 36,
            iconHeight = 45,
            iconAnchorX = 18,

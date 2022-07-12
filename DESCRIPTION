@@ -7,8 +7,9 @@ Maintainer: Remko Duursma <remko@shintolabs.nl>
 Description: As a replacement for leaflet::awesomeIcons, which uses FontAwesome (fa) 4.7, and messes up shiny applications (which uses fa 5+).
    The package includes all fa icons placed on top of 10+ colored map markers, to be used with leaflet::addMarkers.
 License: CC0
+Imports: leaflet, glue
 Encoding: UTF-8
 LazyData: true
 Depends: 
     R (>= 2.10)
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2

@@ -3,5 +3,6 @@
 export(fa5Icon)
 export(kvkIcons)
 importFrom(glue,glue)
+importFrom(leaflet,makeIcon)
 importFrom(stringr,str_replace_all)
 importFrom(stringr,str_trim)
